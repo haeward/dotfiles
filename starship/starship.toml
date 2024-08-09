@@ -1,0 +1,308 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+$container\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$c\
+$conda\
+$dart\
+$deno\
+$erlang\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$helm\
+$kotlin\
+$lua\
+$nim\
+$nix_shell\
+$nodejs\
+$package\
+$php\
+$python\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$zig\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$battery\
+[](fg:#33658A bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+$cmd_duration\
+\n$character\
+"""
+
+[os]
+disabled = false
+style = "bg:#9A348E"
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+disabled = false
+aliases = { "haeward" = "Haeward"}
+
+# Directory
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# Time
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
+
+# Battery Status
+[battery]
+disabled = false
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '🪫 '
+format = '[ $symbol$percentage]($style)'
+
+[[battery.display]]
+threshold = 20
+style = "bg:#33658A fg:#FFFFFF"
+
+[[battery.display]]
+threshold = 100
+style = "bg:#33658A fg:#FFFFFF"
+discharging_symbol = '💦 '
+
+# Command Duration
+[cmd_duration]
+disabled = false
+min_time = 0
+format = '[ ⏱ $duration]($style)'
+
+# Docker
+[container]
+symbol = "⬢ "
+style = "bg:#DA627D"
+format = '[$symbol \[$name\]]($style) '
+
+[docker_context]
+symbol = "🐳 "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style)'
+
+# Git
+[git_branch]
+symbol = " "
+style = "bg:#FCA17D"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#FCA17D"
+format = '[$all_status$ahead_behind ]($style)'
+
+# Language
+[c]
+symbol = "C "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[conda]
+symbol = "🅒 "
+style = "bg:#86BBD8"
+format = '[ $symbol $environment ](style)'
+
+[dart]
+symbol = "🎯 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[deno]
+symbol = "🦕 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[erlang]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = "🐹 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+symbol = "🅶 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = "☕ "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[helm]
+symbol = "⎈ "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[kotlin]
+symbol = "🅺 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = "🌙 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nix_shell]
+symbol = "❄️  "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " Node.js "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[package]
+symbol = "📦 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = "🐘 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = "🐍 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rlang]
+symbol = "📐 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[ruby]
+symbol = "💎 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " Rust "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " Scala "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[solidity]
+symbol = "S "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[swift]
+symbol = "🐦 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[zig]
+symbol = "↯ "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
