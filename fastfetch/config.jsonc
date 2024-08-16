@@ -9,7 +9,6 @@
         "format": "{/2}{-}{/}{2}{?3} {3}{?}"
     },
     "kernel",
-    "datetime",
     "uptime",
     {
       "type": "battery",
@@ -28,8 +27,6 @@
     "gpu",
     "memory",
     "disk",
-    "localip",
-    "locale",
     "break",
     "colors"
   ]
