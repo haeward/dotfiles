@@ -15,6 +15,6 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.
 echo "Cloning configurations..."
 git clone https://github.com/haeward/dotfiles.git /tmp/dotfiles
 mv $HOME/.config/sketchybar $HOME/.config/sketchybar_backup
-mv /tmp/dotfiles/sketchybar $HOME/.config/sketchybar
+mv /tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar
 rm -rf /tmp/dotfiles
 brew services start sketchybar
