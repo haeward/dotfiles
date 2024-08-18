@@ -1,0 +1,27 @@
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 0.85
+blur = false
+dynamic_padding = false
+decorations = "Buttonless"
+startup_mode = "Maximized"
+padding = { x = 18, y = 16 }
+dimensions = { columns = 125, lines = 35 }
+
+[scrolling]
+history = 1000
+
+[font]
+size = 14.0
+normal = { family = "MesloLGSDZ Nerd Font Mono", style = "Regular" }
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
