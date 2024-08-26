@@ -34,7 +34,8 @@ end
 require("tab-title").setup()
 
 return Config:init()
-    :append(require("appearance"))
-    :append(require("fonts"))
-    :append(require("general"))
-    :append(require("hyperlink")).options
+  :append(require("appearance"))
+  :append(require("bindings"))
+  :append(require("fonts"))
+  :append(require("general"))
+  :append(require("hyperlink")).options
