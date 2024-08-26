@@ -49,6 +49,8 @@ sbar.add("item", "widgets.volume.padding", {
   width = settings.group_paddings
 })
 
+local volume_slider = {}
+
 volume_percent:subscribe("volume_change", function(env)
   local volume = tonumber(env.INFO)
   local icon = icons.volume._0
