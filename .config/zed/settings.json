@@ -1,0 +1,91 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  // font
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_weight": 400,
+  "buffer_line_height": "comfortable",
+  "buffer_font_features": {
+    "calt": false
+  },
+  "ui_font_size": 15,
+  "ui_font_weight": 500,
+
+  // theme
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
+  },
+
+  // scrollbar
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": true
+  },
+
+  // tab bar
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true
+  },
+
+  // editor tabs
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+
+  // editor toolbar
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
+  },
+
+  // git
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+
+  // indent guides
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "disabled"
+  },
+
+  // telemetry
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+
+  "active_pane_magnification": 1.0,
+  "always_treat_brackets_as_autoclosed": false,
+  "auto_update": true,
+  "autosave": "on_focus_change",
+  "confirm_quit": false,
+  "cursor_blink": false,
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": true,
+  "tab_size": 4,
+  "use_autoclose": true,
+  "vim_mode": false
+}
